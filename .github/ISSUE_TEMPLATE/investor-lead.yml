@@ -1,0 +1,66 @@
+name: Investor Lead
+description: Track an investor in the pipeline
+labels: ["type: investor", "status: new"]
+body:
+  - type: input
+    id: firm
+    attributes:
+      label: Firm / Individual
+      placeholder: e.g. Y Combinator
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Partner / Contact
+      placeholder: e.g. Gustaf Alströmer
+
+  - type: input
+    id: email
+    attributes:
+      label: Email
+
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn / Twitter
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Check Size
+      options:
+        - Pre-seed (<$500K)
+        - Seed ($500K–$2M)
+        - Series A ($2M–$10M)
+        - Strategic / Angel
+
+  - type: dropdown
+    id: focus
+    attributes:
+      label: Thesis fit
+      options:
+        - HR Tech / Future of Work
+        - AI / ML
+        - SaaS
+        - Marketplace
+        - General
+        - Unknown
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      options:
+        - Cold outreach
+        - Warm intro
+        - Inbound
+        - Conference
+        - YC application
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: Portfolio companies, past conversations, signals of interest
