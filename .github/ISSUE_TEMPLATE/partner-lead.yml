@@ -1,0 +1,44 @@
+name: Partner Lead
+description: Track a BD or integration partner
+labels: ["type: partner", "status: new"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: Company
+      placeholder: e.g. Ashby, Greenhouse
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Name & Title
+
+  - type: input
+    id: email
+    attributes:
+      label: Email
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Partnership Type
+      options:
+        - ATS Integration
+        - Job Board Distribution
+        - Data Provider
+        - Co-marketing
+        - Reseller
+        - Other
+
+  - type: textarea
+    id: value
+    attributes:
+      label: Value Exchange
+      placeholder: What do we get? What do they get?
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
