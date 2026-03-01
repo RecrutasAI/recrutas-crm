@@ -1,0 +1,56 @@
+name: Company Lead
+description: Track a new company or recruiter lead
+labels: ["type: company", "status: new"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: Company Name
+      placeholder: e.g. Stripe
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Name & Title
+      placeholder: e.g. Jane Smith — Head of Talent
+
+  - type: input
+    id: email
+    attributes:
+      label: Contact Email
+
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn / Website URL
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Company Size
+      options:
+        - 1–10
+        - 11–50
+        - 51–200
+        - 201–1000
+        - 1000+
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: How did we find them?
+      options:
+        - Inbound
+        - Cold outreach
+        - Referral
+        - Conference
+        - LinkedIn
+        - Other
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: Hiring needs, timing, budget signals, anything relevant
